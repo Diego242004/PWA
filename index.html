@@ -10,13 +10,13 @@
         if('serviceworker' in navigator){
             navigator.serviceWorker.register('sw.js')
             .then(
-                function(register){
+                function(registration){
                     console.log('Registro del sw satisfatorio con ambito: ',
                     register.scope);
                 }
             ).catch(
                 function(err){
-                    console.log('')
+                    console.log('El registro del SW fallo:', err)
                 }
             )
         }
