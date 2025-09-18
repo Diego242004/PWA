@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA 10</title>
+</head>
+<body>
+    <script>
+        if('serviceworker' in navigator){
+            navigator.serviceWorker.register('sw.js')
+            .then(
+                function(register){
+                    console.log('Registro del sw satisfatorio con ambito: ',
+                    register.scope);
+                }
+            ).catch(
+                function(err){
+                    console.log('')
+                }
+            )
+        }
+    </script>
+    
+</body>
+</html>
